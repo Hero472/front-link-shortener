@@ -1,0 +1,32 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f9fc;
+}
+
+.url-input {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.shorten-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shorten-button:hover {
+  background-color: #357ab8;
+}
