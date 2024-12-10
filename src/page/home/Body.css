@@ -3,30 +3,29 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f7f9fc;
 }
 
 .url-input {
-  width: 80%;
-  max-width: 500px;
   padding: 10px;
-  font-size: 1em;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  margin: 10px 0;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .shorten-button {
   padding: 10px 20px;
-  font-size: 1em;
+  background-color: #007bff;
   color: white;
-  background-color: #4a90e2;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .shorten-button:hover {
-  background-color: #357ab8;
+  background-color: #0056b3;
+}
+
+p {
+  color: #888;
 }

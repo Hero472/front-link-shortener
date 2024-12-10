@@ -1,5 +1,6 @@
 /* Header.css */
 
+/* General Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -8,6 +9,7 @@
   background-color: #4a90e2;
   color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .title-container {
@@ -16,37 +18,58 @@
 
 .title {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.5em;
+  font-weight: bold;
+  padding: 0.2em;
 }
 
 .subtitle {
-  margin: 5px 0 0 0;
-  font-size: 1em;
+  margin: 5px;
+  font-size: 1.2em;
   font-weight: 300;
+  color: #d2d8dd
 }
 
-/* Login Form */
+/* Login Form Styles */
 .login-form {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
 }
 
 .login-input {
-  padding: 8px;
-  margin: 0 5px;
+  padding: 10px;
+  margin: 10px 0;
   font-size: 1em;
   border: 1px solid #ddd;
   border-radius: 5px;
+  width: 100%;
+  transition: border 0.3s;
 }
 
-.login-button, .register-button {
-  padding: 8px 15px;
+.login-input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Login Button and Register Button */
+.login-button,
+.register-button {
+  padding: 12px 20px;
   font-size: 1em;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
   transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 .login-button {
@@ -59,9 +82,65 @@
 
 .register-button {
   background-color: #56a3d1;
-  margin-left: 5px;
+  margin-top: 10px;
 }
 
 .register-button:hover {
   background-color: #4792b7;
+}
+
+/* User Info and Logout Button */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.username {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Base button styles */
+button {
+  padding: 8px 15px;
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Logout button styles */
+.logout-button {
+  background-color: #f44336;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+.logout-button:active {
+  background-color: #c13525;
+  transform: scale(1);
+}
+
+/* Profile button styles */
+.profile-button {
+  background-color: #4CAF50;
+}
+
+.profile-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.profile-button:active {
+  background-color: #388e3c;
+  transform: scale(1);
 }

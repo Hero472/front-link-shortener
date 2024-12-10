@@ -1,57 +1,178 @@
+/* Modal Overlay - Darkens the background and centers the modal */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  animation: fadeIn 0.3s ease-out; /* Fade-in animation */
 }
 
-/* Modal Content */
+/* Modal Content - White box for the modal with padding, rounded corners, and shadow */
 .modal-content {
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 10px;
   width: 90%;
   max-width: 400px;
   text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  animation: scaleUp 0.3s ease-out; /* Scaling animation */
 }
 
+.modal-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Modal Links List */
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.modal-content li {
+  margin: 10px 0;
+}
+
+.modal-content a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+/* Modal Input Fields - Style input fields with padding and subtle border */
 .modal-input {
   width: 80%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
   font-size: 1em;
   border: 1px solid #ddd;
   border-radius: 5px;
+  transition: border-color 0.3s ease;
+  color: black;
 }
 
+.modal-input:focus {
+  border-color: #4a90e2; /* Blue border on focus */
+  outline: none;
+}
+
+/* Submit Button - Styled button with hover effect */
 .modal-button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-top: 15px;
-  font-size: 1em;
-  background-color: #4a90e2;
-  color: white;
+  font-size: 1.1em;
+  background-color: #4a90e2; /* Blue button */
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .modal-button:hover {
-  background-color: #357ab8;
+  background-color: #357ab8; /* Darker blue on hover */
 }
 
+/* Close Button - Small close button with minimal design */
 .modal-close {
-  margin-top: 10px;
-  padding: 5px 10px;
+  margin-top: 15px;
+  padding: 8px 16px;
   background: transparent;
-  border: none;
+  border: 1px solid #ddd;
   color: #333;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+/* Updated label color to black */
+label {
+  color: black;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-close:hover {
+  background-color: #f5f5f5; /* Light gray background on hover */
+}
+
+/* Links Container - Adds spacing and layout for multiple links */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Link Card - Card-style box for each link */
+.link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Long URL - Original URL styling */
+.link-long-url {
+  font-size: 1em;
+  color: #333;
+  margin: 0 0 5px;
+  word-break: break-all; /* Handle long URLs gracefully */
+}
+
+/* Short URL - Short code styling */
+.link-short-url {
+  font-size: 0.9em;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-short-url:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
